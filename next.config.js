@@ -8,6 +8,9 @@ const nextConfig = {
     // !! WARN !!
     ignoreBuildErrors: true,
   },
+  images: {
+    domains: ['content.fakeface.rest'],
+  },
 }
 
 module.exports = nextConfig
