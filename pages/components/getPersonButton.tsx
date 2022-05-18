@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getPerson } from '../../functions/functions';
+import Image from "next/image";
 
 export default class GetPersonButton extends Component {
 	constructor(props = {}) {
@@ -23,11 +24,13 @@ export default class GetPersonButton extends Component {
 		const { loading } = this.state;
 		return (
 			<div className='person'>
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"/>
 				<button onClick={this.fetchData} disabled={loading}>
 					{loading && <i className='fa fa-refresh fa-spin'></i>}
 					{loading && <p>Loading image</p>}
 					{!loading && <p>Click me</p>}
 				</button>
+				<Image></Image>
 				<img
 					src={this.state.image}
 					alt='some person'
